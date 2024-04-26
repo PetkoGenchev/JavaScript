@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Movie List</h1>
+
+    <ul id="movie-list">
+        <li>The Matrix</li>
+        <li>The Lord of the rings</li>
+        <li>Lost</li>
+        <li>Men in Black</li>
+        <li>Django</li>
+
+    </ul>
+
+    <a href="/" id="link">LINK</a>
+
+    <script>
+        let movieElements = document.getElementById('movie-list');
+
+        // Difference between target and current target - target is clicked smallest part, current target is where the listener is put
+        movieElements.addEventListener('click', (e) => {
+            console.log('Clicked element:');
+            console.log(e.target);
+            console.log('Event attached element:');
+            console.log(e.currentTarget);
+
+            if(e.tar.tagName == 'LI'){
+                e.target.style.textDecoration = 'line-through';
+            }
+        });
+
+        // prevent default stops default action and does only what you told it afterwards
+        let linkElement = document.getElementById('link');
+        linkElement.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('click');
+        })
+
+
+    </script>
+</body>
+</html>

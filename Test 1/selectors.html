@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petko Test</title>
+</head>
+<body>
+    <h1 id="heading">Petko Test</h1>
+    <p class="fancy-text">Lorem psm dolor a u </p>
+
+    <ul>
+        <li class="fancy-text">Some phrase here</li>
+        <li>Second phrase</li>
+    </ul>
+
+    <script>
+        // Get by ID
+        let headingElement = document.getElementById('heading');
+        console.log(headingElement);
+
+        // GET by class name
+        let fancyTextElements = document.getElementsByClassName('fancy-text');
+        console.log(fancyTextElements);
+
+        // Get by tag name
+        let lielements = document.getElementsByTagName('li');
+        console.log(lielements);
+
+        // Get one by css selector
+        let fancyParagraph = document.querySelector('p.fancy-text');
+        console.log(fancyParagraph);
+
+        // Get many by css selector
+        let unorderedLiElements = document.querySelectorAll('ul li');
+        console.log(unorderedLiElements);
+    </script>
+</body>
+</html>
